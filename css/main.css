@@ -1,0 +1,364 @@
+
+
+        body  {
+          margin:2px 0px 0px 0px;
+          padding:0;
+          font-family: 'Word Sans', sans-serif;
+          max-width: 100%;
+          display: table;
+        }
+
+        body.responsive{
+          margin-left: 50%;
+        }
+
+        body nav{
+          text-transform: uppercase;
+        }
+
+
+        img.Logo{
+          width: 98%;
+          height: 250px;
+          background-size: cover;
+        }
+
+        @media only screen and (max-width: 500px){
+        img.Logo{
+          width: 100%;
+          height:auto;
+        }
+        }
+
+        .pics{
+          position: relative;
+          text-align: center;
+        }
+
+        .bergen a{
+          position: absolute;
+          font-size: 99px;
+          color: white;
+          top: 30%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          text-shadow: 0 0 40px black;
+          font-family:'castellar';
+          text-decoration: none;
+        }
+
+        @media only screen and (max-width: 500px){
+          .bergen a{
+            font-size:40px;
+          }
+        }
+        @media only screen and (max-width: 300px){
+          .bergen a{
+            font-size:20px;
+          }
+        }
+
+        .container{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          background-color: #456e86;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+
+        }
+        @media all and(max-width: 500px){
+          .container >li{
+            -webkit-box-flex: 1;
+                -ms-flex: 1 1 100%;
+                    flex: 1 1 100%;
+          }
+        }
+
+
+        nav ul {
+              list-style: none;
+              background-color: #444;
+              text-align: center;
+              padding: 0;
+              margin: 0;
+
+            }
+
+
+
+
+        .container li{
+          margin: 5px 0px 5px 0px;
+
+        }
+
+
+        nav ul li{
+
+          background-color:#456e86;
+          padding: 10px 0px 10px 0px;
+        }
+
+
+        @media only screen and (max-width 500px ){
+          #myLoadingArea{
+            width: 100%;
+          }
+        }
+
+
+
+
+        li a{
+          color: black;
+          padding: 15px 19px;
+          height: 100%;
+          text-decoration: none;
+          border-right: 1px solid #bbb;
+        }
+
+
+        li a:hover{
+
+        color: white;
+        background-color: grey;
+        }
+
+
+        .footer{
+        background-color: #d7d5ec;
+        display: table-row;
+        }
+        .wrapper{
+
+          height: auto;
+        }
+
+        .footer p{
+          text-align: center;
+          font-size: 15px;
+          font-family: Arial;
+
+        }
+
+
+        .Velkommen{
+        text-indent: 30px;
+        font-size: 25px;
+        }
+
+
+        div p{
+          font-family:'Convergence';
+          font-size: 20px;
+
+        }
+
+      .D{
+          font-size: 40px;
+        }
+      h1{
+        text-indent: 30px;
+        font-size: 25px;
+      }
+      img.item{
+        width: 450px;
+        height: 250px;
+      }
+
+    @media screen and (max-width: 700px){
+    img.item
+     {
+      width: 100%;
+      height: 250px;
+     }
+     .bergen a {
+       font-size: 65px;
+     }
+    }
+
+    .FlexWrapper{
+      background-color: #f0f1dd;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+      .responsive{
+        text-align: center;
+        font-family: monospace;
+        font-size: 20px;
+
+      }
+      .links{
+          text-decoration: none;
+          color: black;
+      }
+
+      .gallery{
+        border: 1px solid grey;
+        margin: 25px;
+      }
+      .gallery:hover{
+        border:1px solid black;
+        opacity: .5;
+
+
+      }
+      .clickMe{
+        color: white;
+        opacity: 0;
+        font-size: 20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 30%;
+        width: 50%;
+      }
+      .gallery.p{
+        color: #f1f1;
+      }
+
+    #map{
+      height: 420px;
+      width: 100%;;
+      position: center;
+      background-color: grey;
+
+
+    }
+    @media only screen and (max-width: 320px){
+      #map{
+        width:100%;
+        height:400px;
+
+      }
+    }
+
+    .omBergen{
+      text-indent: 20px;
+      font-size: 20px;
+      font-family: 'Convergence';
+      margin-left: 5px;
+
+
+    } 
+
+
+    #knapp1{
+    background-color:#e7e7e7;
+    border: none;
+    color: black;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    #knapp1:hover{
+      background-color:grey;
+      color:white;
+
+    }
+
+
+    #basicForm{
+      width: 650px;
+      height: 35px;
+    }
+    @media only screen and (max-width 500px ) {
+      #basicForm{
+        width: 100%;
+        height: 35px;
+      }
+
+    }
+    #basicSearch{
+      background-color:#e7e7e7;
+      border: none;
+      color: black;
+      padding: 14px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin-left: -15px;
+      cursor: pointer;
+      border:1px solid #456e86;
+
+    }
+    #basicSearchInput{
+      width: 400px;
+      margin: 10px;
+      padding: 14px;
+      border:1px solid #456e86;
+    }
+
+
+#search{
+  background-color:#e7e7e7;
+  border: none;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display:table-row;
+  font-size: 16px;
+  margin: 4px 2px 0px 10px;
+  cursor: pointer;
+}
+label{
+  margin-left: 0.5em;
+  margin-right: 2em;
+  width: 7em;
+  border: 20px;
+}
+#advancedForm{
+  display: block;
+}
+#pris{
+  margin-left: 2px;
+}
+#favorittlekeplass{
+background-color: #e7e7e7;
+}
+
+@media only screen and (max-width: 500px){
+  #myLoadingArea{
+  max-width:450px;
+  }
+}
+
+#sort{
+  background-color:#e7e7e7;
+  border: none;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#sort:hover{
+  background-color:grey;
+  color:white;
+}
+@media only screen and (max-width 500px){
+  .myCheckboxes{
+    width: 50px;
+  }
+}

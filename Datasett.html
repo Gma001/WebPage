@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="icon" type="img/png" href="img/favicon.jpg"/>
+    <script type="text/javascript" src="js/myScript.js"></script>
+    <title>Datasett</title>
+  </head>
+  <body>
+
+    <div class="pics">
+        <img class="Logo" src="img/download.jpg" alt="Logo"><br>
+        <div class="bergen">
+         <a href="index.html"> Bergen</a>
+        </div>
+    </div>
+
+    <hr>
+   <header>
+      <nav class="menu">
+        <ul class="container">
+          <li><a class="hjem" href="index.html">Hjem</a> </li>
+          <li><a href="Kartet.html">Kart</a>  </li>
+          <li><a href="Lekeplasser.html"> Lekeplasser</a> </li>
+          <li><a href="Favorittlekeplass.html"> Favorittlekeplass</a> </li>
+         </ul>
+      </nav>
+      <!-- </header> -->
+    <br> <br>
+
+    <h2>Datasett</h2>
+
+				<section id="toalettListe">
+
+					<form>
+						<label>Søk etter første bokstav i navn: </label><input type="text" id="firstLetterName" name="nameSort" placeholder="Forbokstav">
+						</br></br>
+						<label>Søk etter første bokstav i adresse: </label><input type="text" id="firstLetterAdresse" name="adresseSort" placeholder="Forbokstav">
+						</br>
+						<input type="button" id="sort" value="Søk">
+						<script>
+							document.getElementById("sort").addEventListener("click",function(){
+								sort();
+							});
+						</script>
+					</form>
+
+					<section id="loadingArea"></section>
+
+        	<ol id="liste">	</ol>
+				</section>
+
+
+      <script>
+			loadData("https://hotell.difi.no/api/json/stavanger/utsiktspunkt?", loadList);
+		</script>
+
+  <div class="footer"> <p> 134 Prosjekt 2018. <br>Bergen informasjons side </p></div>
+  </body>
+</html>

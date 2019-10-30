@@ -1,0 +1,95 @@
+<!DOCTYPE  html>
+<html>
+<head>
+  <title> Kartet</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/myScript.js"></script>
+  <link rel="icon" type="img/png" href="img/favicon.jpg"/>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuyOvv1Ea6mJ_AVvFW7TdgtaHKlaNYp0E&callback=getPins">
+  </script>
+  <script>loadData("https://hotell.difi.no/api/json/bergen/dokart?", loadList);</script>
+</head>
+<body>
+
+
+
+ <div class="pics">
+    <img class="Logo" src="img/download.jpg" alt="Logo"><br>
+    <div class="bergen">
+    <a href="index.html">Bergen</a>
+    </div>
+  </div>
+  <hr>
+
+  <nav class="menu">
+    <ul class="container">
+      <li><a class="hjem" href="index.html">Hjem</a> </li>
+      <li><a href="Lekeplasser.html"> Lekeplasser</a> </li>
+      <li><a href="Favorittlekeplass.html"> Favorittlekeplass</a> </li>
+      <li><a href="Datasett.html"> Datasett</a> </li>
+     </ul>
+  </nav>
+
+
+
+
+  <section id="myLoadingArea">
+    <h1 >Oversikt over toalettene i Bergen:</h1>
+    <ol id="liste" style="display:none"></ol>
+    <!--Gjør at knappen kan bli trykt bare en gang -->
+    <button id="knapp1" onclick="hideShow();">Se liste</button>
+  </section>
+
+  <br>
+  <form id="basicForm">
+    <input type="text" id="basicSearchInput" name="basicSearchInput" placeholder="Kjønn adresse">
+    <input type="button" id="basicSearch" value="Søk">
+    <script>
+      document.getElementById("basicSearch").addEventListener("click",function(){
+        basicSearch();
+          });
+    </script>
+  </form>
+<br>
+
+
+<br> <br>
+
+<form class="myCheckboxes">
+  <input type="checkbox" id="visAvansertSok" name="visAvansertSok" value="vis"><label>Vis avansert søk</label>
+  <script>
+  document.getElementById("visAvansertSok").addEventListener("click",function(){
+    visAvansertSok();
+  });
+  </script>
+</form>
+<br>
+
+<form id="advancedForm" style="display: none">
+  <input type="radio" name="kjonn" value="Herre" class="kjonn"><label>Herre</label>
+  <input type="radio" name="kjonn" value="Dame" class="kjonn"><label>Dame</label>
+  </br>
+  <input type="checkbox" id="rullestol" name="rullestol" value="Rullestol"><label>Rullestol</label>
+  <input type="checkbox" id="stellerom" name="stellerom" value="Stellerom"><label>Stellerom</label>
+  </br>
+  <input type="checkbox" id="gratis" name="gratis" value="gratis" onclick="checkGratis()"><label>Gratis</label>
+  <input type="number" id="pris" name="pris" placeholder="Maks-pris" onClick="checkMaks_pris()"><label>Maks-pris</label>
+  </br>
+  <input type="checkbox" id="open_no" name="open_no" value="open_no" onclick="checkOpen_no()"><label>Open nå</label>
+  <input type="number" id="opningstid" name="opningstid" placeholder="Time" onclick="checkOpningstid()"><label>Opent klokka</label>
+  </br>
+  <input type="button" id="search" value="Søk" onclick="advancedSearch()">
+</form>
+
+<br><br>
+
+<div id="map"> </div>
+
+<br> <br> <br>
+
+<div class="footer"> <p> 134 Prosjekt 2018. <br>Bergen informasjons side </p></div>
+</body>
+</html>

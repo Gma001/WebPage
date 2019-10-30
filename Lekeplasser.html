@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>Lekeplasser</title>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="css/main.css"/>
+      <link rel="icon" type="img/png" href="img/favicon.jpg"/>
+      <script type="text/javascript" src="js/myScript.js" ></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script>
+  			loadData("https://hotell.difi.no/api/json/bergen/lekeplasser?", loadList);</script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuyOvv1Ea6mJ_AVvFW7TdgtaHKlaNYp0E&callback=getPins">
+      </script>
+  </head>
+
+  <body>
+    <div class="pics">
+        <img class="Logo" src="img/download.jpg" alt="Logo"><br>
+        <div class="bergen">
+          <a href="index.html"> Bergen</a>
+        </div>
+    </div>
+    <hr>
+    <nav class="menu">
+      <ul class="container">
+        <li><a class="hjem" href="index.html">Hjem</a> </li>
+        <li><a href="Kartet.html">Kart</a>  </li>
+        <li><a href="Favorittlekeplass.html"> Favorittlekeplass</a> </li>
+        <li><a href="Datasett.html"> Datasett</a> </li>
+       </ul>
+    </nav>
+    <br> <br>
+
+    <section id="myLoadingArea">
+      <h1 >Oversikt over lekeplassene i Bergen:</h1>
+      <ol id="liste" style="display:none"></ol>
+      <button id="knapp1" onclick="hideShow();">Se liste</button>
+    </section>
+
+
+
+    <br><br>
+
+    <div id="map"> </div>
+
+    <br><br>
+
+  <div class="footer"> <p> 134 Prosjekt 2018. <br>Bergen informasjons side </p></div>
+  </body>
+</html>

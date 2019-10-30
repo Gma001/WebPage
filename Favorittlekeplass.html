@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <title>Favorittlekeplass</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="icon" type="img/png" href="img/favicon.jpg"/>
+    <script type="text/javascript" src="js/myScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+
+    <script id="loadingArea"></script>
+
+    <div class="pics">
+          <img class="Logo" src="img/download.jpg" alt="Logo"><br>
+        <div class="bergen">
+          <a href="index.html"> Bergen</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <nav class="menu">
+      <ul class="container">
+        <li><a class="hjem" href="index.html">Hjem</a> </li>
+        <li><a href="Kartet.html">Kart</a>  </li>
+        <li><a href="Lekeplasser.html"> Lekeplasser</a> </li>
+        <li><a href="Datasett.html"> Datasett</a> </li>
+       </ul>
+    </nav>
+
+      <h2>Min favorittlekeplass</h2>
+
+			<section>
+        <select id="liste" onchange="selectLekeplass()"> </select>
+        <section id="favorittlekeplass"></section>
+      </section>
+      <script>
+		    	loadData("https://hotell.difi.no/api/json/bergen/lekeplasser?", loadList);
+	   	</script>
+
+    <br> <br>
+
+<div class="footer"> <p> 134 Prosjekt 2018. <br>Bergen informasjons side </p></div>
+
+  </body>
+</html>
